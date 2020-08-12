@@ -31,7 +31,7 @@ public class Recipe {
     private Difficulty difficulty;
     private Notes notes;
 
-    @DBRef
+    //@DBRef // removed as not supported by MongoDB
     private Set<Category> categories = new HashSet<>();
 
     public void setNotes(Notes notes) {
