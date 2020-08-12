@@ -60,7 +60,7 @@ public class IngredientServiceImpl implements IngredientService {
                 });
 
 
-
+                 // Refactored from java streams to pure Reactive stuff
 //                .map(recipe -> recipe.getIngredients()
 //                .stream()
 //                .filter(ingredient -> ingredient.getId().equalsIgnoreCase(ingredientId))
