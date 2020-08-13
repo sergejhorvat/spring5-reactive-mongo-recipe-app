@@ -18,7 +18,7 @@ public class Ingredient {
     private String description;
     private BigDecimal amount;
 
-    @DBRef
+    //@DBRef // removed as not supported by MongoDB
     private UnitOfMeasure uom;
 
     public Ingredient() {

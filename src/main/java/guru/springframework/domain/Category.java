@@ -19,6 +19,6 @@ public class Category {
     private String id;
     private String description;
 
-    @DBRef
+    //@DBRef // removed as not supported by MongoDB
     private Set<Recipe> recipes;
 }
