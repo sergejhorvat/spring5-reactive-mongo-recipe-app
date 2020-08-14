@@ -84,7 +84,7 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
-    @Transactional
+    //@Transactional
     public Mono<RecipeCommand> saveRecipeCommand(RecipeCommand command) {
 
         // Convert to reactive type

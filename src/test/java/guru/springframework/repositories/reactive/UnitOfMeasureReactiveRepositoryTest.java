@@ -46,7 +46,7 @@ public class UnitOfMeasureReactiveRepositoryTest {
 
         UnitOfMeasure fetchedUOM = unitOfMeasureReactiveRepository.findByDescription(EACH).block();
 
-        assertEquals(EACH, uom.getDescription());
+        assertEquals(EACH, fetchedUOM.getDescription());
 
     }
 }

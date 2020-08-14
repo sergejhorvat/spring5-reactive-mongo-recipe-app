@@ -49,7 +49,7 @@ public class IngredientServiceImpl implements IngredientService {
         return recipeReactiveRepository
                 .findById(recipeId)
 
-                //Refactor to Reactive nativly not to use Java 8 streams and mix with reactive
+                //Refactor to Reactive nativlly not to use Java 8 streams and mix with reactive
                 .flatMapIterable(Recipe::getIngredients)
                 .filter(ingredient -> ingredient.getId().equalsIgnoreCase(ingredientId))
                 .single()
@@ -195,7 +195,7 @@ public class IngredientServiceImpl implements IngredientService {
                 //Ingredient ingredientToDelete = ingredientOptional.get();
                // ingredientToDelete.setRecipe(null);
                 recipe.getIngredients().remove(ingredientOptional.get());
-                recipeReactiveRepository.save(recipe);
+                recipeReactiveRepository.save(recipe).block();
             }
         } else {
             log.debug("Recipe Id Not found. Id:" + recipeId);

@@ -5,8 +5,6 @@ import guru.springframework.commands.RecipeCommand;
 import guru.springframework.converters.RecipeCommandToRecipe;
 import guru.springframework.converters.RecipeToRecipeCommand;
 import guru.springframework.domain.Recipe;
-import guru.springframework.exceptions.NotFoundException;
-import guru.springframework.repositories.RecipeRepository;
 import guru.springframework.repositories.reactive.RecipeReactiveRepository;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,8 +15,6 @@ import reactor.core.publisher.Mono;
 
 import java.util.HashSet;
 import java.util.List;
-import java.util.Optional;
-import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
